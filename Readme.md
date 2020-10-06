@@ -72,16 +72,21 @@ FFLFRRF
 Pour representer:
 
 - un robot une simple structure suffira.
-- La structure pour contenir les robots pourras être un `vec<Robot>`
+- La structure pour contenir les robots pourras être un `Vec<Robot>`
+
+### Tests et Documentation
+
+Écrire des tests de votre code comme indiqué dans cette partie du livre
+[ch11 tests](https://doc.rust-lang.org/book/ch11-01-writing-tests.html) ou de [Rust By Example](https://doc.rust-lang.org/rust-by-example/testing.html)
+
+Il est aussi attendu que vous ayez documenter votre code avec les commentaires de
+documentation `\\\`. Les Tests et la documentation font parti de l'evaluation.
+Dans le doute demandez moi mon avis!
 
 ### Conclusion version 0.1.0
 
 Dans certe première itération, vous devrez pouvoir faire la simulation des robots,
 depuis un fichier d'instruction, et afficher a la fin leurs positions finales.
-
-#### Tests
-
-A venir
 
 ## Version 0.2.0 Affichage implementation de Display
 
@@ -128,13 +133,20 @@ votre code.
 
 ## version 0.3.0 : un peu d'aléatoire
 
-Programmer ce qui est neccessaire pour que a chaque *tick* de façon aléatoire un
-robot avance sa liste d'instruction serait symbolisée par simplement aucune liste
-d'instructions.
+Programmer ce qui est neccessaire pour que a chaque *tick* (pas discret d'avancement du monde)
+un robot fait une instruction de façon aléatoire. Sa liste d'instruction serait symbolisée
+par la liste d'instructions vide au parsing.
 
-Programmer ce qui est neccessaire pour que a chaque *tick* de façon aléatoire un
-robot avance sa liste d'instruction serait symbolisée par simplement aucune liste
-d'instructions.
+## 0.3.1 gen-world
+
+Écrire une option de la ligne de commande qui lance lance un jeu avec un monde généré
+avec aléatoirement: X_max, Y_max et positions et listes d'instructions de Robots,
+inclus.
+
+## 0.3.3 Ajouter des obstacles sur le plateau de jeu
+
+Les robots ont maintenant sur piste de dance des obstacles a vous de choisir si
+les obstacles bloquent ou auraient des propriétées amusantes.
 
 ## version 0.4.0 : un peu de couleurs
 
