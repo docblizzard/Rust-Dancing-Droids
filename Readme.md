@@ -42,7 +42,7 @@ dimensions. A chaque tour un robot executera un ordre les ordres concistent en
 effectuer une rotation à droite ou à gauche ou avancer ou ne rien faire!
 
 > Conseil: Deux type `enum` vous serons utile! ;) Une pour l'orientation, une pour
-> le les instructions!
+> representer les instructions!
 
 Dans le fichier d'instructions vous aurrez les caractères suivants possibles:
 
