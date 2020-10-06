@@ -1,5 +1,5 @@
 [package]
-name = "PaintDroid"
+name = "paint_droid"
 version = "0.1.0"
 authors = ["Auteur <Courriel@nom.domaine.tld"]
 edition = "2018"
