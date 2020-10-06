@@ -1,0 +1,8 @@
+
+5 5   // X_max Y_max
+
+1 1 N // position du robot 2 en x=1 y=1 orientation=nord
+FLLFRF // Liste d'instruction du robot
+
+3 2 S // position du robot 2 x=3 y=2 orientation=South
+FFLFRRF
