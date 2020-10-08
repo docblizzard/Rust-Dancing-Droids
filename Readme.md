@@ -12,12 +12,8 @@ très à l'aise le but de se projet de de faire coder et progresser tout le mond
 
 ## Rendu
 
-A rendre pour dans 2 semaines!
-
-- L2-A1: 20 octobre
-- L2-A2: 27 octobre
-- L2-B1: 23 octobre
-- L2-B2: 30 octobre
+*Nouvelle date de rendu !* (tout groupe confondu)
+A rendre pour le 30 octobre.
 
 ## Partie obligatoire
 
