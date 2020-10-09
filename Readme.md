@@ -12,8 +12,17 @@ très à l'aise le but de se projet de de faire coder et progresser tout le mond
 
 ## Rendu
 
-*Nouvelle date de rendu !* (tout groupe confondu)
-A rendre pour le 30 octobre.
+*Nouvelles dates de rendu !*
+
+- L2A: 30 octobre 2020
+- L2B: 06 novembre 2020
+
+Note de @darnuria: Pourquoi les L2B le 6 novembre? le 9 octobre le cours en
+demi groupe, sera en dégradé pour vérifier que tout le monde a bien un
+environnement installé, paré à l'autonomie.
+
+Ça me permettra de corriger rapidement et de pas laisser trainer pour vous
+donner des retours vite.
 
 ## Partie obligatoire
 
