@@ -28,7 +28,7 @@ donner des retours vite.
 
 Afin d'avoir au moins 10 il est neccessaire de faire toutes les parties indispensables.
 C'est à dire TOUTE la version 0.1.0. J'incite cependant tout le monde a tenter des
-améliorations une fois une version fonctionelle.
+améliorations une fois que vous avez un code qui fait ce qui est demandé.
 
 Le rendu sera un fork du projet versionné sous git. Pour ce faire vous
 pouvez forker ce dépot et faire vos contributions dans votre fork avec votre groupe.
@@ -39,6 +39,25 @@ publiques, mais je veillerais a ce que vous n'ayez pas de plaggiat personnelleme
 L'entre-aide est tolérée surtout pour les bonus! Happy hacking!
 
 ## Version 0.1.0 Déplacements et collisions fonctionnelles
+
+## Méthodologie: Lire le sujet, établir des étapes de réalisation
+
+**TooLong;Don'tRead**: Ne sautez pas direct sur le code, il vous faut un plan.
+
+Dans tout projet il faut un plan. Pour avoir un plan, il faut lire les consignes
+ou les spécifications, qui décrivent ce qu'on attends de vous.
+
+Ensuite découper en étapes résolvable facilement exemple:
+
+- Écrire une `enum Orientation` qui gére les 4 cas possibles
+- Écrire une fonction qui lit un caractères `char` et crée une `Orientation`
+- Écrire un [commentaire de documentation](https://doc.rust-lang.org/stable/rust-by-example/meta/doc.html) de cette fonction qui dit comment l'utiliser
+- Écrire des [tests](https://doc.rust-lang.org/book/ch11-01-writing-tests.html) pour vérifer que votre fonction fait ce que vous voulez.
+
+Si besoin, décrivez des choses simples et bien découpées en français, ou faites un schema et partagez le avec votre
+équipe.
+
+Pour vous organiser et suivre les choses à faire entre vous il y a les **Issues** de gitlab.
 
 ## Deplacement orientation
 
