@@ -64,6 +64,7 @@ Cas des collisions: Faire dire `"Robot ID<numId> Collision en (x, y)"`
 
 Format du fichier definisant le monde:
 
+**Important** : Dans le format de fichier la gestion des commentaires `\\` est optionnelle .
 ```txt
 5 5   // X_max Y_max
 1 1 N // position du robot en x=1 y=1 orientation = nord
@@ -71,7 +72,6 @@ FLLFRF
 
 3 2 S // position du robot 2 x=3 y=2 orientation=South
 FFLFRRF
-
 ```
 
 Pour representer:
