@@ -79,7 +79,9 @@ Dans le fichier d'instructions vous aurrez les caractères suivants possibles:
 En cas de collision avec un autre robot lors d'un déplacement le robot devra
 dire sur la sortie standard:
 
-Cas des collisions: Faire dire `"Robot ID<numId> Collision en (x, y)"`
+Cas des collisions: Faire dire `"Robot ID<numId> Collision en (x, y)"` et ne
+pas comptabiliser le mouvement du Robot, qui occassion la collision mais
+consommer son instruction.
 
 Format du fichier definisant le monde:
 
