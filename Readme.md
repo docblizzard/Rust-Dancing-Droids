@@ -70,9 +70,9 @@ effectuer une rotation à droite ou à gauche ou avancer ou ne rien faire!
 
 Dans le fichier d'instructions vous aurrez les caractères suivants possibles:
 
-- L: Oriente le robot de 90 degrée à gauche par exemple passe de orientation: N à W
-- R: Oriente le robot de 90 degrée à droite par exemple passe de orientation: N à E
-- F: Avance dans le sens de l'orientation d'une case
+- `L`: Tourne le robot à gauche par exemple passe de orientation: `N` à `W`
+- `R`: Tourne le robot à droite par exemple passe de orientation: `N` à `E`
+- `F`: Avance dans le sens de l'orientation d'une case
 
 ## Collisions
 
