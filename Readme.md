@@ -119,14 +119,14 @@ depuis un fichier d'instruction, et afficher a la fin leurs positions finales.
 Dans cette version on va écrire du code pour afficher la positions des robots et
 dessiner la grille.
 
-Vous devrez pouvoir dessiner quelque chose comme cela en partant de la grille donnée en exemple plus haut
-dans votre terminal:
+Vous devrez pouvoir dessiner quelque chose comme cela en partant de la grille
+donnée en exemple plus haut dans votre terminal:
 
 ```txt
 Terrain { x_max = 5; y_max = 5 }
 Robots [
- { id = 0, x = 1; y = 1; orientation: North },
- { id = 1; x = 3; y = 2; orientation: South },
+ { id = 0, x = 1; y = 1; orientation: North, instructions: [F,L,L,F,R,F], },
+ { id = 1; x = 3; y = 2; orientation: South, instructions: [F,F,L,F,R,R,F], },
 ]
 Etat initial
 ============================
@@ -143,7 +143,7 @@ Etat final
 4 .  .  .  .  .  .
 3 .  .  .  .  .  .
 2 .  .  .  .  .  .
-1 .  ➡  .  .  .  .
+1 ⬅  .  .  .  .  .
 0 .  .  .  ⬅  .  .
   0  1  2  3  4  5
 ```
