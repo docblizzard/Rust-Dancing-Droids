@@ -45,7 +45,8 @@ fn read_direction( d : &char) -> Direction {
     }
 }
 
-/// Test Limite du tableau
+/// Test Limite du tableau Ne marche pas
+
 /*
 fn check_limit(rbt: Robot) -> &i32 {
     match rbt.direction {
