@@ -16,14 +16,7 @@ struct Robot {
     pos_Y : i32,
 }
 
-/// Instruction Donné
-/*
-enum Instruction {
-    L,
-    R,
-    F
-}
-*/
+
 /// Possible Directions
 #[derive(PartialEq, Debug)] /// Permet de comparer un enum Direction
 enum Direction {
