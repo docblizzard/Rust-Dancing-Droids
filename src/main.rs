@@ -135,11 +135,11 @@ fn main() {
                     if c == 'F' {
                         if robot1.direction == Direction::S {
                             if robot2.collision(&(&robot1.pos_X), &(&robot1.pos_Y +1)  ) == true {
-                                println!("Collision entre les robots en x = {}, y = {}", (&robot1.pos_X +1), robot1.pos_X)
+                                println!("Collision entre les robots en x = {}, y = {}", (&robot1.pos_X +1), &robot1.pos_X)
                             }
                             else {
                                 robot1.pos_Y = &robot1.pos_Y + 1;
-                                println!("Robot 1 est maintenant en x = {}, y = {}", robot1.pos_X, robot1.pos_Y);
+                                println!("Robot 1 est maintenant en x = {}, y = {}", &robot1.pos_X, &robot1.pos_Y);
                             }
                         }
                     }
