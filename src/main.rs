@@ -120,7 +120,7 @@ fn main() {
 
     let  text = File::open("src/text/two_robots.txt").expect("Open Failed");
     let  text = BufReader::new(text);
-    for line in text.lines().filter_map(|result| result.ok()) {
+    for line in text.lines().filter_map(|result| result.ok()) {  /// Récupéré sur OS
         println!("{}",countlines);
         for c in line.chars() {
             if countlines == 0 {
