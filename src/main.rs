@@ -45,7 +45,8 @@ fn read_direction( d : &char) -> Direction {
     }
 }
 
-/// Test Limite du tableau Ne marche pas encore malheuresement
+/// Test Limite du tableau
+/*
 fn check_limit(rbt: Robot) -> &i32 {
     match rbt.direction {
         Direction::N => match rbt.pos_Y {
@@ -65,7 +66,8 @@ fn check_limit(rbt: Robot) -> &i32 {
             _ => &(&(rbt.pos_Y) +1),
         }
     }
-}
+} */
+
 /// Instruction Donné selon la direction dans la quelle le robot regarde
 
 fn read_instruction(rbt : &Robot, chr : &char) -> Direction {
@@ -94,6 +96,10 @@ fn read_instruction(rbt : &Robot, chr : &char) -> Direction {
 impl Robot {
     fn Collision(&self,  posX: i32, posY: i32) -> bool {
         self.pos_X == posX && self.pos_Y == posY
+    }
+
+    fn check_dir(&self) -> bool{
+        self.direction == Direction:: S
     }
 
 }
@@ -132,13 +138,24 @@ fn main() {
                 if c == 'L' || c == 'F' || c == 'R' {
                     robot1.direction = read_instruction(&robot1, &c );
                     if c == 'F' {
-                        robot1.pos_Y = check_limit(&robot1);
-                        robot1.pos_Y = check_limit(&robot1);
+                     /*  robot1.pos_Y = check_limit(&robot1);
+                        robot1.pos_Y = check_limit(&robot1); */
                     }
                 }
             }
+            if countlines == 3 {
+                if c == 'N' || c == 'S' || c == 'W' || c == 'E' {
+                    robot2.direction = read_direction(&c);
+                }
+            }
+            if countlines == 4 {
+                if c == 'L' || c == 'F' || c == 'R' {
+                    robot2.direction = read_instruction(&robot2, &c);
+                }
+            }
         }
-        countlines = countlines +1;
+            countlines = countlines +1;
     }
-        println!("robot 1 en robot x = {}, y = {}  in direction = {:?}",robot1.pos_X, robot1.pos_Y,  robot1.direction) ;
+        println!("robot 1 en robot x = {}, y = {}  in direction = {:?} \n ",robot1.pos_X, robot1.pos_Y,  robot1.direction) ;
+        println!("robot 2 direction = {:?}",robot2.direction);
 }
