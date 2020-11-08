@@ -1,6 +1,7 @@
 use std::fs::File;
-use std::io::{self, BufRead};
+use std::io::{BufRead, BufReader};
 use std::cmp::PartialEq;
+use std::fmt::Display;
 
 /// Tableau
 struct Dimension {
@@ -24,7 +25,7 @@ enum Instruction {
 }
 
 /// Possible Directions
-#[derive(PartialEq)]
+#[derive(PartialEq, Debug)]
 enum Direction {
     N,
     S,
@@ -45,28 +46,24 @@ fn read_direction( d : char) -> Direction {
 }
 
 /// Instruction Donné selon la direction dans la quelle le robot regarde
-/*
-fn read_instruction(rbt : Robot, dir : char) -> Direction {
-    match dir {
+
+fn read_instruction(rbt : Robot, charac : char) -> Direction {
+    match charac {
         'L' => match rbt.direction {
             Direction::N => Direction::W,
             Direction::W => Direction::S,
-            Direction::N => Direction::E,               A Reparer
+            Direction::S => Direction::E,
             Direction::E => Direction::N,
-            _ => Direction:: N,
         },
         'R' => match rbt.direction {
-            Direction:: N => Direction:: E,
-            Direction:: E => Direction:: S,
-            Direction:: S => Direction:: W,
-            Direction:: W => Direction:: N,
-            _ => Direction:: N,
+            Direction::N => Direction::E,
+            Direction::E => Direction::S,
+            Direction::S => Direction::W,
+            Direction::W => Direction::N,
         },
-        'F' => Direction:: N,
-        _ => {}
+        _ => rbt.direction
     }
 }
-*/
 
 impl Robot {
     fn Collision(&self,  other: &Robot) -> bool {
@@ -79,23 +76,43 @@ impl Robot {
 
 }
 
+
 fn main() {
+    let mut countchars = 0;
+    let mut countlines = 0;
     let mut robot1 = Robot {
-        direction : Direction:: S,
-        pos_Y : 0,
-        pos_X : 0
+        direction: Direction::W,
+        pos_Y: 0,
+        pos_X: 0
     };
     let mut robot2 = Robot {
-        direction : Direction:: N,
-        pos_Y : 5,
-        pos_X : 5
+        direction: Direction::N,
+        pos_Y: 5,
+        pos_X: 5
     };
-    if robot1.check_dir() = true{
+    if robot1.check_dir() == true {
         robot1.pos_Y = robot1.pos_Y + 1;
     }
+        /// Lis le fichier text et execute les differentes fonctions selon la ligne
 
-    let f = File::open("src/data/content.txt");
+    let mut text = File::open("src/text/two_robots.txt").expect("Open Failed");
+    let mut text = BufReader::new(text);
+    for line in text.lines().filter_map(|result| result.ok()) {
+        for c in line.chars() {
+            if countlines == 0 {
+                if c == 'N' || c == 'S' || c == 'W' || c == 'E' {
+                    robot1.direction = read_direction(c);
+                }
+          /*  if countlines == 1{
+                if c == 'L' || c == 'F' || c == 'R' {
+                    fn read_instruction(robot1, c : char);
+                }
+            } */
+            }
+        }
+        countlines = countlines +1;
+    }
 
 
-    println!("Robots colliding = {}, robot 1 in pos_Y = {}", robot1.Collision(&robot2), robot1.pos_Y) ;
+    println!("Robots colliding = {}, robot 1 in pos_Y = {:?}", robot1.Collision(&robot2), robot1.direction) ;
 }
